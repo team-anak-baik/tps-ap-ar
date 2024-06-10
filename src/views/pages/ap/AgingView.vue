@@ -61,7 +61,7 @@
             </CInputGroup>
           </CCol>
         </CRow>
-        <div v-if="filter.type == 'summary'">
+        <div v-if="filter.type == 'summary'" style="max-width: 100%; overflow: auto">
           <table v-if="invoices && invoices.vendors" class="table table-hover table-striped table-bordered table-sm text-center align-middle">
             <thead class="table-secondary">
               <tr>
@@ -218,7 +218,7 @@
             </tbody>
           </table>
         </div>
-        <div v-if="filter.type == 'detail'">
+        <div v-if="filter.type == 'detail'" style="max-width: 100%; overflow: auto">
           <table v-if="invoices && invoices.vendors" class="table table-hover table-striped table-bordered table-sm text-start align-middle">
             <tbody v-for="(mnt, idx) in invoices.vendors">
               <tr class="text-center table-danger">
